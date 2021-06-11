@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 class Task extends Component {
   state = {};
   render() {
-    const { description } = this.props.task;
+    const { onComplete, onDelete } = this.props;
     return (
       <div>
-        <input type="checkbox" />
-        {description}
-        <button onClick={() => this.props.onDelete(this.props.task.id)}>
-          Delete
-        </button>
+        <input type="checkbox" onClick={() => onComplete(this.props.task.id)} />
+        {this.props.task.description}
+        <button onClick={() => onDelete(this.props.task.id)}>Delete</button>
       </div>
     );
   }

@@ -4,11 +4,16 @@ import Task from './task';
 class Tasks extends Component {
   state = {};
   render() {
-    const { task, onDelete } = this.props;
+    const { onComplete, onDelete } = this.props;
     return (
       <div>
         {this.props.tasks.map((task) => (
-          <Task key={task.id} task={task} onDelete={onDelete} />
+          <Task
+            key={task.id}
+            task={task}
+            onComplete={onComplete}
+            onDelete={onDelete}
+          />
         ))}
       </div>
     );
