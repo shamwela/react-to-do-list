@@ -25,7 +25,7 @@ class TaskInput extends Component {
           value={this.state.description}
           onChange={this.onChange}
         />
-        <input type="submit" value="Submit" className="btn" />
+        <input type="submit" value="Add task" className="btn" />
       </form>
     );
   }

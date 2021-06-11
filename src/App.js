@@ -5,13 +5,23 @@ import Tasks from './components/tasks';
 
 class App extends Component {
   state = {
-    tasks: [{ id: 1, completed: true, description: 'Task 1' }],
+    tasks: [
+      {
+        id: Math.floor(Math.random() * 10000000000),
+        completed: false,
+        description: 'Task 1',
+      },
+    ],
   };
 
   handleAddTask = (description) => {
     // console.log(description);
     const tasks = [...this.state.tasks];
-    tasks.push({ id: 2, completed: false, description });
+    tasks.push({
+      id: Math.floor(Math.random() * 10000000000),
+      completed: false,
+      description,
+    });
     this.setState({ tasks });
   };
 
