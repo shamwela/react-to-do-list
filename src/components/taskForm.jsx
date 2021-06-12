@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './taskForm.css';
 class TaskInput extends Component {
   state = {
     description: '',
@@ -17,7 +17,7 @@ class TaskInput extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="taskForm">
         <input
           type="text"
           name="taskDescription"
