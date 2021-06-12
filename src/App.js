@@ -9,8 +9,8 @@ class App extends Component {
     tasks: [
       {
         id: uuidv4(),
-        completed: false,
         description: 'Example task',
+        completed: false,
       },
     ],
   };
@@ -19,13 +19,18 @@ class App extends Component {
     const tasks = [...this.state.tasks];
     tasks.push({
       id: uuidv4(),
-      completed: false,
       description,
+      completed: false,
     });
     this.setState({ tasks });
   };
 
-  handleComplete = (completedId) => {};
+  handleComplete = (completedTask) => {
+    const tasks = [...this.state.tasks];
+    const index = tasks.indexOf(completedTask);
+    tasks[index].completed = !tasks[index].completed;
+    this.setState({ tasks });
+  };
 
   handleDelete = (deletedId) => {
     const tasks = this.state.tasks.filter((task) => task.id !== deletedId);
