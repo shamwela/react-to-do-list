@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 import TaskInput from './components/taskForm';
 import Tasks from './components/tasks';
+import { v4 as uuidv4 } from 'uuid';
 
 class App extends Component {
   state = {
     tasks: [
       {
-        id: Math.floor(Math.random() * 10000000000),
+        id: uuidv4(),
         completed: false,
-        description: 'Task 1',
+        description: 'Example task',
       },
     ],
   };
 
   handleAddTask = (description) => {
-    // console.log(description);
     const tasks = [...this.state.tasks];
     tasks.push({
-      id: Math.floor(Math.random() * 10000000000),
+      id: uuidv4(),
       completed: false,
       description,
     });
