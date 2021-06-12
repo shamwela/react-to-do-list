@@ -39,9 +39,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>React To-do List</h1>
-        <TaskInput onAddTask={this.handleAddTask} />
+      <div className="app">
+        <h1 id="app-title">
+          React <br />
+          To-do List
+        </h1>
+        <TaskInput id="task-input" onAddTask={this.handleAddTask} />
         <Tasks
           tasks={this.state.tasks}
           onComplete={this.handleComplete}

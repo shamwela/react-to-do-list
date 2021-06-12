@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #000000;
   color: #fafafa;
   line-height: 1.5;
   font-family: sans-serif;
-  padding: 2rem;
 }
 
 h1,
@@ -49,4 +54,9 @@ h3 {
 
 p {
   max-width: 60ch;
+}
+
+button,
+input {
+  padding: 0.5rem;
 }
