@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div id="app">
         <h1 id="app-title">
           React <br />
           To-do List

@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   background: #000000;
   color: #fafafa;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 h1,
@@ -56,7 +60,7 @@ p {
   max-width: 60ch;
 }
 
-button,
-input {
-  padding: 0.5rem;
+input,
+button {
+  padding: 0.8em;
 }

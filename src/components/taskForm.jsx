@@ -17,15 +17,15 @@ class TaskInput extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="taskForm">
+      <form onSubmit={this.handleSubmit} id="task-form">
         <input
           type="text"
           name="taskDescription"
-          className="task-input"
+          id="task-form-input"
           value={this.state.description}
           onChange={this.onChange}
         />
-        <input type="submit" value="Add task" className="btn" />
+        <input type="submit" value="Add task" id="task-form-submit" />
       </form>
     );
   }
