@@ -1,0 +1,27 @@
+.task {
+  width: 100%;
+  height: 8vh;
+  padding: 2vh 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.task-checkbox,
+.delete-button {
+  position: absolute;
+}
+
+.task-checkbox {
+  left: 5vw;
+}
+
+.task-description {
+  margin: 0 auto;
+}
+
+.delete-button {
+  right: 5vw;
+  background: #dc3545;
+  color: #fafafa;
+}

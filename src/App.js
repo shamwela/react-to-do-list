@@ -9,7 +9,17 @@ class App extends Component {
     tasks: [
       {
         id: uuidv4(),
-        description: 'Example task',
+        description: 'Example task 1',
+        completed: false,
+      },
+      {
+        id: uuidv4(),
+        description: 'Example task 2',
+        completed: false,
+      },
+      {
+        id: uuidv4(),
+        description: 'Example task 3',
         completed: false,
       },
     ],
