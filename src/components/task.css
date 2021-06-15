@@ -1,20 +1,16 @@
 .task {
   width: 100%;
-  min-height: 8vh;
-  padding: 0.5rem;
+  min-height: 5vh;
+  padding: 0.5rem 0;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
-  grid-row-gap: 0px;
 }
 
 .task > * {
   margin: auto;
   text-align: center;
-}
-
-.task-checkbox {
 }
 
 .task-description {
@@ -24,4 +20,10 @@
 .delete-button {
   background: #dc3545;
   color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+  .task {
+    width: 50%;
+  }
 }

@@ -1,14 +1,13 @@
 #task-form {
   width: 100%;
   min-height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
 }
 
-#task-form-input,
-#task-form-submit {
-  width: auto;
+#task-from > * {
   height: 100%;
 }
 
@@ -17,7 +16,12 @@
 }
 
 #task-form-submit {
-  margin-left: 0.5rem;
   background: #276ef1;
   color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+  #task-form {
+    width: 50%;
+  }
 }
