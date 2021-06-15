@@ -1,27 +1,27 @@
 .task {
   width: 100%;
-  height: 8vh;
-  padding: 2vh 0;
-  display: flex;
-  align-items: center;
-  position: relative;
+  min-height: 8vh;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
 }
 
-.task-checkbox,
-.delete-button {
-  position: absolute;
+.task > * {
+  margin: auto;
+  text-align: center;
 }
 
 .task-checkbox {
-  left: 5vw;
 }
 
 .task-description {
-  margin: 0 auto;
+  word-wrap: break-word;
 }
 
 .delete-button {
-  right: 5vw;
   background: #dc3545;
   color: #fafafa;
 }
