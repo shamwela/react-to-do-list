@@ -27,6 +27,7 @@ class TaskInput extends Component {
           placeholder="Add task"
           value={this.state.description}
           onChange={this.onChange}
+          autoFocus
         />
         <input type="submit" value="Add task" id="task-form-submit" />
       </form>
