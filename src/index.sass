@@ -1,0 +1,81 @@
+:root
+  --black: #000000
+  --white: #fafafa
+  --blue: #276ef1
+  --red: #dc3545
+  --dominant-color: var(--black)
+  --secondary-color: var(--white)
+  --accent-color: var(--blue)
+  --danger-color: var(--red)
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  border-radius: 0.3125rem
+  color: #fafafa
+
+*:focus
+  outline: none
+
+body
+  background: #000000
+  line-height: 1.5
+  font-family: Arial, sans-serif
+
+h1,
+h2,
+h3
+  line-height: 1.1
+  font-weight: 900
+
+h1,
+h2,
+h3,
+p
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    /* use calc() because if you use only a viewport unit to size your type, the font size won't change if you zoom */
+      var(--fluid-type-max, 1.3rem)
+  )
+
+h1
+  --fluid-type-min: 2.5rem
+  --fluid-type-target: 5vw
+  --fluid-type-max: 5rem
+  max-width: 15ch
+
+h2
+  --fluid-type-min: 1.8rem
+  --fluid-type-max: 3rem
+
+h3
+  --fluid-type-min: 1.5rem
+  --fluid-type-max: 2.5rem
+
+h2,
+h3
+  max-width: 30ch
+
+p
+  max-width: 60ch
+
+input,
+button
+  padding: 0.8em
+
+input[type='submit'],
+input[type='checkbox'],
+button
+  cursor: pointer
+
+input[type='checkbox']
+  -webkit-appearance: none
+  width: 1rem
+  height: 1rem
+  background: transparent
+  border: 2px solid #fafafa
+
+input[type='checkbox']:checked
+  background: #276ef1
