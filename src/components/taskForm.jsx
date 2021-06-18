@@ -7,7 +7,9 @@ class TaskInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.onAddTask(this.state.description);
+    if (this.state.description) {
+      this.props.onAddTask(this.state.description);
+    }
     this.setState({ description: '' });
   };
 
@@ -22,6 +24,7 @@ class TaskInput extends Component {
           type="text"
           name="taskDescription"
           id="task-form-input"
+          placeholder="Add task"
           value={this.state.description}
           onChange={this.onChange}
         />
