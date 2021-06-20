@@ -19,7 +19,9 @@ class Task extends Component {
           type="checkbox"
           onClick={() => onComplete(this.props.task)}
         />
-        <span className="task-description">{this.outputTaskDescription()}</span>
+        <label className="task-description" for='task-checkbox'>
+          {this.outputTaskDescription()}
+        </label>
         <button
           className="delete-button"
           onClick={() => onDelete(this.props.task.id)}
