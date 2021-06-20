@@ -16,6 +16,7 @@
 }
 
 #task-form-submit {
+  -webkit-appearance: none;
   background: var(--accent-color);
   color: var(--white);
 }
