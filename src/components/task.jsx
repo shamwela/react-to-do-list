@@ -4,9 +4,7 @@ import './task.css';
 class Task extends Component {
   outputTaskDescription = () => {
     const { description, completed } = this.props.task;
-    if (completed) {
-      return <del>{description}</del>;
-    }
+    if (completed) return <del>{description}</del>;
     return description;
   };
 
