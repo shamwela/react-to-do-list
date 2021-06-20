@@ -11,21 +11,19 @@ class Task extends Component {
   };
 
   render() {
-    const { onComplete, onDelete } = this.props;
+    const { task, onComplete, onDelete } = this.props;
     return (
       <div className="task">
         <input
+          id={task.id}
           className="task-checkbox"
           type="checkbox"
-          onClick={() => onComplete(this.props.task)}
+          onClick={() => onComplete(task)}
         />
-        <label className="task-description" for='task-checkbox'>
+        <label className="task-description" htmlFor={task.id}>
           {this.outputTaskDescription()}
         </label>
-        <button
-          className="delete-button"
-          onClick={() => onDelete(this.props.task.id)}
-        >
+        <button className="delete-button" onClick={() => onDelete(task.id)}>
           Delete
         </button>
       </div>
