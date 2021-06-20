@@ -9,8 +9,8 @@ class TaskInput extends Component {
     event.preventDefault();
     if (this.state.description) {
       this.props.onAddTask(this.state.description);
+      this.setState({ description: '' });
     }
-    this.setState({ description: '' });
   };
 
   onChange = (event) => {

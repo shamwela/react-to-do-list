@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './task.css';
 
 class Task extends Component {
-  state = {};
-
   outputTaskDescription = () => {
     const { description, completed } = this.props.task;
     if (completed) {
